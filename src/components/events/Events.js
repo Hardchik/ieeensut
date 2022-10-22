@@ -1,6 +1,26 @@
+import React from 'react'
 import './Events.css'
 import {MdSchedule} from 'react-icons/md'
 function Events() {
+    let [over1, setOver1] = React.useState(false);
+    let [over2, setOver2] = React.useState(false);
+    let buttonstyle1 = {
+        textDecoration: 'none',
+        color: 'white'
+    }
+    let buttonstyle2 = {
+        textDecoration: 'none',
+        color: 'white'
+    }
+    if(over1) {
+        buttonstyle1.color = '#1B72F7'
+    } else if(over2) {
+        buttonstyle2.color = '#1B72F7'
+    } else if(!over1) {
+        buttonstyle1.color = 'white'
+    } else if(!over2) {
+        buttonstyle2.color = 'white'
+    }
   return (
     <div className='EventPage' id="events">
     <div className="event">EVENTS</div>
@@ -28,8 +48,8 @@ function Events() {
                   </div>
               </div>
 
-              <button className="read-more">
-              <a href="https://www.instagram.com/p/CjM7Et2uEea/" style={{ textDecoration: "none", color: "white" }}>Explore Now</a>
+              <button className="read-more" onMouseOver={()=>setOver1(true)} onMouseOut={()=>setOver1(false)}>
+              <a href="https://www.instagram.com/p/CjM7Et2uEea/" style={buttonstyle1}>Explore Now</a>
                 </button>
 
           </div>
@@ -56,8 +76,8 @@ function Events() {
                   </div>
               </div>
 
-              <button className="read-more">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScG4TdIlJONHAQ0OVAnuDb0Y9wHpibsXadd9BXd6boaQGhx_w/viewform" style={{ textDecoration: "none", color: "white" }}> Explore Now</a>
+              <button className="read-more" onMouseOver={()=>setOver2(true)} onMouseOut={()=>setOver2(false)}>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScG4TdIlJONHAQ0OVAnuDb0Y9wHpibsXadd9BXd6boaQGhx_w/viewform" style={buttonstyle2}> Explore Now</a>
                 </button>
           </div>
 

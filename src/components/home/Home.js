@@ -7,6 +7,18 @@ import {BsInstagram} from 'react-icons/bs'
 import {GrLinkedinOption} from 'react-icons/gr'
 import {FaFacebookF} from 'react-icons/fa'
 function Home() {
+  let [over,setOver]=React.useState(false);
+
+  let buttonstyle = {
+    textDecoration: 'none',
+    color: 'white'
+  }
+  
+  if(over) {
+    buttonstyle.color = '#1A73F7'
+  }
+  else {buttonstyle.color = 'white'}
+
   return (
     <div className="home" id="home">
       <div className="home_left_sec">
@@ -24,8 +36,8 @@ function Home() {
         <div className="abt_home">
             IEEE NSUT is one of the most renowned student branches of the IEEE architecture due to its well-defined contributions and unique impacts.
         </div>
-        <div className="home_btn">
-        <a href="#about" style={{textDecoration:"none",color:"white"}}>  Get Started</a>
+        <div className="home_btn" onMouseOver={()=> setOver(true)} onMouseOut={()=> setOver(false)}>
+        <a href="#about" style={buttonstyle}>  Get Started</a>
       </div>
       </div>
       <div className="home_right_sec">

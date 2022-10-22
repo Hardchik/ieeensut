@@ -24,11 +24,14 @@
 
 .home_btn:hover{
     width: 120px;
-    background-color: rgba(26, 114, 247, 0.492);
+    background-color: rgba(255, 255, 255, 0.492);
     cursor: pointer;
     padding: 10px;
     font-weight: bolder;
     margin-top: 30px;
+    border: 1px solid rgb(26, 115, 247);
+    color: rgb(26, 115, 247);
+    transition: 300ms ease;
 }
 
 .icon_coll{
@@ -73,6 +76,7 @@
         background-color: rgb(26, 115, 247);
         width: 120px;
         color: white;
+        border-radius: 7px;
         padding: 10px;
         font-weight: bolder;
         margin-top: 30px;
@@ -102,6 +106,7 @@
         color: white;
         padding: 10px;
         font-weight: bolder;
+        border-radius: 7px;
         margin: auto;
         margin-top: 30px;
     }
@@ -130,6 +135,7 @@
         width: 120px;
         color: white;
         padding: 10px;
+        border-radius: 7px;
         font-weight: bolder;
         margin: auto;
         margin-top: 30px;
@@ -137,4 +143,9 @@
 }
 .home_btn{
     text-align: center;
+    border-radius: 7px;
+    border: 1px solid rgb(26, 115, 247);
+}
+.home_btn a{
+    color: white;
 }
